@@ -3,7 +3,7 @@ export default function Card({ className }: { className: string }) {
         <>
             <div className={className} >
                 <div className="w-full h-[404px] flex rounded-t-3xl">
-                    <img className="rounded-t-3xl" src="/images/addidas.jpg" alt="" />
+                    <img className="rounded-t-3xl" src="./images/addidas.jpg" alt="" />
                 </div>
                 <p className="mt-5 mx-5 text-[1.5rem] text-[#00356B] font-bold">ADDIDAS XL</p>
                 <p className="mt-2 mx-5 text-[0.8rem] font-light">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima necessitatibus omnis magni corporis, laborum hic...</p>
