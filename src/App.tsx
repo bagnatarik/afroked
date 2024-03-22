@@ -11,10 +11,10 @@ function App() {
         <Navbar />
         <div className='grow w-full h-full bg-transparent flex flex-col items-center justify-center'>
           <div className='w-full mb-10'>
-            <p className='text-white text-center text-[4.688rem] px-40 mb-10'>
+            <p className='transition-all animateTextLR text-white text-center text-[4.688rem] px-40 mb-10'>
               Bienvenue sur AFROKED - Votre destination shopping en ligne ultime !
             </p>
-            <p className='text-center text-[1.25rem] text-white font-extralight px-[17rem]'>
+            <p className='transition-all animateTextRL text-center text-[1.25rem] text-white font-extralight px-[17rem]'>
               Découvrez une sélection imbattable de produits de qualité. Faites vos  achats en ligne rapidement et facilement. Trouvez tout ce dont vous avez  besoin en quelques clics. Rejoignez-nous dès maintenant !
             </p>
           </div>
