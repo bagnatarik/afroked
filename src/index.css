@@ -2,20 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-    font-family: Montserrat;
-    src: url(/public/Montserrat/static/Montserrat-SemiBold.ttf);
-}
-
-@font-face {
-    font-family: 'Montserrat-L';
-    src: url(/public/Montserrat/static/Montserrat-Regular.ttf);
-}
-
 body {
-    font-family: 'Montserrat', 'Times New Roman';
-}
-
-.montserratL {
-    font-family: 'Montserrat-L';
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
 }
