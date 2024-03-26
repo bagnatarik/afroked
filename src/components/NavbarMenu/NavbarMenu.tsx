@@ -47,13 +47,13 @@ export default function NavbarMenu({ className }: { className: string }) {
                         </button>
                         <div className='transition-all duration-700 animate-open absolute flex flex-col top-14 left-0 w-full dark:bg-slate-800 bg-slate-100 pt-5'>
                             {menuComponent}
-                            <Button className='px-10 py-2 mx-5 mb-5 border transition-all duration-500 bg-slate-900 dark:bg-transparent hover:bg-transparent hover:border hover:text-slate-900 hover:border-slate-900 text-white dark:hover:bg-white dark:hover:text-slate-800' text="S'inscrire" />
+                            <Button isAdd={false} className='px-10 py-2 mx-5 mb-5 border transition-all duration-500 bg-slate-900 dark:bg-transparent hover:bg-transparent hover:border hover:text-slate-900 hover:border-slate-900 text-white dark:hover:bg-white dark:hover:text-slate-800' text="S'inscrire" />
                         </div>
                     </ul>
                 ) : (
                     <ul className={className}>
                         {menuComponent}
-                        <Button className='hidden md:block px-10 py-2 ml-5 border transition-all duration-500 bg-slate-900 dark:bg-transparent hover:bg-transparent hover:border hover:text-slate-900 hover:border-slate-900 text-white dark:hover:bg-white dark:hover:text-slate-800' text="S'inscrire" />
+                        <Button isAdd={false} className='hidden md:block px-10 py-2 ml-5 border transition-all duration-500 bg-slate-900 dark:bg-transparent hover:bg-transparent hover:border hover:text-slate-900 hover:border-slate-900 text-white dark:hover:bg-white dark:hover:text-slate-800' text="S'inscrire" />
                         <button onClick={openMenu} className='md:hidden group animate-open duration-1000 delay-1000'>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="transition-all w-6 h-6">
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
