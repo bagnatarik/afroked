@@ -18,12 +18,15 @@ export default function Section({ className }: { className: string }) {
                             <Button className='px-10 py-2 ml-2 border transition-all duration-500 bg-slate-900 hover:bg-transparent hover:border hover:text-slate-900 hover:border-slate-900 text-white' text="Rechercher" />
                         </form>
                     </div>
-                    <div className='w-full flex items-center justify-center'>
-                        <Card className='w-[350px] h-[550px] border border-black mx-2' imageSource='/afroked/images/addidas.jpg' />
-                        <Card className='w-[350px] h-[550px] border border-black mx-2' imageSource='/afroked/images/addidas.jpg' />
-                        <Card className='w-[350px] h-[550px] border border-black mx-2' imageSource='/afroked/images/addidas.jpg' />
-                        <Card className='w-[350px] h-[550px] border border-black mx-2' imageSource='/afroked/images/addidas.jpg' />
-                        <Card className='w-[350px] h-[550px] border border-black mx-2' imageSource='/afroked/images/addidas.jpg' />
+                    <div className='w-full flex flex-wrap items-center justify-center'>
+                        <Card className='w-[350px] h-[550px] border border-black mx-2 my-2' imageSource='/afroked/images/addidas.jpg' />
+                        <Card className='w-[350px] h-[550px] border border-black mx-2 my-2' imageSource='/afroked/images/addidas.jpg' />
+                        <Card className='w-[350px] h-[550px] border border-black mx-2 my-2' imageSource='/afroked/images/addidas.jpg' />
+                        <Card className='w-[350px] h-[550px] border border-black mx-2 my-2' imageSource='/afroked/images/addidas.jpg' />
+                        <Card className='w-[350px] h-[550px] border border-black mx-2 my-2' imageSource='/afroked/images/addidas.jpg' />
+                        <Card className='w-[350px] h-[550px] border border-black mx-2 my-2' imageSource='/afroked/images/addidas.jpg' />
+                        <Card className='w-[350px] h-[550px] border border-black mx-2 my-2' imageSource='/afroked/images/addidas.jpg' />
+                        <Card className='w-[350px] h-[550px] border border-black mx-2 my-2' imageSource='/afroked/images/addidas.jpg' />
                     </div>
                 </div>
             </div>
