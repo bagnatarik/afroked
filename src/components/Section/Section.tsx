@@ -14,7 +14,7 @@ export default function Section({ className }: { className: string }) {
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-5 h-5 relative left-8 text-slate-900">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
                             </svg>
-                            <input className='outline outline-1 w-1/2 py-2 px-14' type="text" name="" id="" />
+                            <input className='outline outline-1 w-1/2 py-2 px-14 rounded-lg' type="text" name="" id="" />
                             <Button isAdd={false} className='px-10 py-2 ml-2 border border-transparent transition-all duration-500 bg-slate-900 hover:bg-transparent hover:border hover:text-slate-900 hover:border-slate-900 text-white rounded-lg' text="Rechercher" />
                         </form>
                     </div>
