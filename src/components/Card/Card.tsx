@@ -14,7 +14,7 @@ export default function Card({ className, imageSource }: { className: string, im
                     <a className='inline-block text-slate-700 w-full text-end cursor-pointer'>Voir plus</a>
                     <div className="grow flex flex-col items-start justify-end pb-2">
                         <p className="text-4xl mb-3 text-end w-full">180 $</p>
-                        <Button isAdd={true} className='w-full flex justify-center py-3 border transition-all duration-500 bg-slate-900 hover:bg-transparent hover:border hover:text-slate-900 hover:border-slate-900 text-white' text="Add to card" />
+                        <Button isAdd={true} className='w-full flex justify-center py-3 border border-transparent transition-all duration-500 bg-slate-900 hover:bg-transparent hover:border hover:text-slate-900 hover:border-slate-900 text-white rounded-lg' text="Add to card" />
                     </div>
 
                 </div>
