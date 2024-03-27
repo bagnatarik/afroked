@@ -11,15 +11,15 @@ export default function Category({ className }: { className: string }) {
                 <div className="absolute">
 
                 </div>
-                <Card className='w-[300px] sm:w-[350px] h-[550px] border border-black mx-2 my-2 text-slate-900 flex-shrink-0' imageSource='/afroked/images/addidas.jpg' />
-                <Card className='w-[300px] sm:w-[350px] h-[550px] border border-black mx-2 my-2 text-slate-900 flex-shrink-0' imageSource='/afroked/images/addidas.jpg' />
-                <Card className='w-[300px] sm:w-[350px] h-[550px] border border-black mx-2 my-2 text-slate-900 flex-shrink-0' imageSource='/afroked/images/addidas.jpg' />
-                <Card className='w-[300px] sm:w-[350px] h-[550px] border border-black mx-2 my-2 text-slate-900 flex-shrink-0' imageSource='/afroked/images/addidas.jpg' />
-                <Card className='w-[300px] sm:w-[350px] h-[550px] border border-black mx-2 my-2 text-slate-900 flex-shrink-0' imageSource='/afroked/images/addidas.jpg' />
-                <Card className='w-[300px] sm:w-[350px] h-[550px] border border-black mx-2 my-2 text-slate-900 flex-shrink-0' imageSource='/afroked/images/addidas.jpg' />
-                <Card className='w-[300px] sm:w-[350px] h-[550px] border border-black mx-2 my-2 text-slate-900 flex-shrink-0' imageSource='/afroked/images/addidas.jpg' />
-                <Card className='w-[300px] sm:w-[350px] h-[550px] border border-black mx-2 my-2 text-slate-900 flex-shrink-0' imageSource='/afroked/images/addidas.jpg' />
-                <Card className='w-[300px] sm:w-[350px] h-[550px] border border-black mx-2 my-2 text-slate-900 flex-shrink-0' imageSource='/afroked/images/addidas.jpg' />
+                <Card className='w-[300px] sm:w-[350px] h-[550px] border border-gray-300 rounded-lg shadow-lg mx-2 my-2 text-slate-900 flex-shrink-0' imageSource='/afroked/images/addidas.jpg' />
+                <Card className='w-[300px] sm:w-[350px] h-[550px] border border-gray-300 rounded-lg shadow-lg mx-2 my-2 text-slate-900 flex-shrink-0' imageSource='/afroked/images/addidas.jpg' />
+                <Card className='w-[300px] sm:w-[350px] h-[550px] border border-gray-300 rounded-lg shadow-lg mx-2 my-2 text-slate-900 flex-shrink-0' imageSource='/afroked/images/addidas.jpg' />
+                <Card className='w-[300px] sm:w-[350px] h-[550px] border border-gray-300 rounded-lg shadow-lg mx-2 my-2 text-slate-900 flex-shrink-0' imageSource='/afroked/images/addidas.jpg' />
+                <Card className='w-[300px] sm:w-[350px] h-[550px] border border-gray-300 rounded-lg shadow-lg mx-2 my-2 text-slate-900 flex-shrink-0' imageSource='/afroked/images/addidas.jpg' />
+                <Card className='w-[300px] sm:w-[350px] h-[550px] border border-gray-300 rounded-lg shadow-lg mx-2 my-2 text-slate-900 flex-shrink-0' imageSource='/afroked/images/addidas.jpg' />
+                <Card className='w-[300px] sm:w-[350px] h-[550px] border border-gray-300 rounded-lg shadow-lg mx-2 my-2 text-slate-900 flex-shrink-0' imageSource='/afroked/images/addidas.jpg' />
+                <Card className='w-[300px] sm:w-[350px] h-[550px] border border-gray-300 rounded-lg shadow-lg mx-2 my-2 text-slate-900 flex-shrink-0' imageSource='/afroked/images/addidas.jpg' />
+                <Card className='w-[300px] sm:w-[350px] h-[550px] border border-gray-300 rounded-lg shadow-lg mx-2 my-2 text-slate-900 flex-shrink-0' imageSource='/afroked/images/addidas.jpg' />
             </div>
         </>
     )

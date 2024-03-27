@@ -4,8 +4,8 @@ export default function Card({ className, imageSource }: { className: string, im
     return (
         <>
             <div className={className}>
-                <img className='w-auto h-1/2' src={imageSource} alt="" />
-                <div className='w-full h-1/2 border-t border-slate-900 px-5 pt-2 flex flex-col'>
+                <img className='w-auto h-1/2 rounded-t-lg' src={imageSource} alt="" />
+                <div className='w-full h-1/2 border-t border-gray-300 px-5 pt-2 flex flex-col'>
                     <p className='font-bold text-xl mb-2'>Addidas XL</p>
                     <p className='font-normal text-base line-clamp-3 mb-3'>
                         repellendus omnis voluptatum minima perspiciatis vel tenetur officiis vero inventore ducimus nostrum debitis, dolores necessitatibus sit!

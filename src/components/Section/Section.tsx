@@ -21,7 +21,6 @@ export default function Section({ className }: { className: string }) {
                     <div className='w-full flex flex-wrap items-center justify-center'>
                         <Category className='flex overflow-x-auto mb-5' />
                         <Category className='flex overflow-x-auto mb-5' />
-                        dqsdsqdqdqdqsqd test
                     </div>
                 </div>
             </div>
@@ -32,7 +31,7 @@ export default function Section({ className }: { className: string }) {
 function HeroSection() {
     return (
         <>
-            <div className='w-3/4 md:h-[750px] flex flex-col items-center justify-center'>
+            <div className='hidden w-3/4 md:h-[750px] md:flex flex-col items-center justify-center'>
                 <p className='text-slate-800 dark:text-white font-bold text-center text-7xl mb-5 animateTextLR'>Bienvenue sur AFROKED - Votre destination shopping en ligne ultime !</p>
                 <p className='text-slate-800 dark:text-white text-center text-lg mb-10 animateTextRL'>Découvrez une sélection imbattable de produits de qualité. Faites vos achats en ligne rapidement et facilement. Trouvez tout ce dont vous avez besoin en quelques clics. Rejoignez-nous dès maintenant !</p>
                 <Button isAdd={false} className='hidden md:block px-56 py-4 border transition-all duration-500 bg-slate-900 dark:bg-transparent hover:bg-transparent hover:border hover:text-slate-900 hover:border-slate-900 text-white dark:hover:bg-white dark:hover:text-slate-800' text="Commencer" />
