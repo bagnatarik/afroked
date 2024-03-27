@@ -35,7 +35,7 @@ export function ListCategory({ className }: { className: string }) {
         { nom: "Équipements et fournitures de bureau", id: 10 }
     ];
     const categoryComponent = categoriesDeProduits.map((category) => (
-        <Button className='px-2 flex-shrink-0 mx-2 py-2 border-transparent transition-all duration-500 bg-slate-900 dark:bg-transparent hover:bg-transparent hover:border hover:text-slate-900 hover:border-slate-900 text-white dark:hover:bg-white dark:hover:text-slate-800 rounded-lg' isAdd={false} isSearch={false} key={category.id} text={category.nom} />
+        <Button className='px-2 flex-shrink-0 mx-2 py-2 border-transparent transition-all duration-500 bg-slate-900 hover:bg-transparent hover:border hover:text-slate-900 hover:border-slate-900 text-white rounded-lg' isAdd={false} isSearch={false} key={category.id} text={category.nom} />
     ))
 
     return (
