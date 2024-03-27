@@ -10,7 +10,7 @@ export default function Navbar({ className }: { className: string }) {
                     </svg>
                     <p className="font-bold text-base uppercase">Afroked</p>
                 </div>
-                <NavbarMenu className='flex items-center justify-between' />
+                <NavbarMenu className='hidden sm:flex items-center justify-between' />
             </div>
         </>
     )
