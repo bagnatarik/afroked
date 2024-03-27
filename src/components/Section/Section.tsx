@@ -1,7 +1,7 @@
 import './Section.css';
 
 import Button from "../Button/Button";
-import Card from '../Card/Card';
+import Category from '../Category/Category';
 
 export default function Section({ className }: { className: string }) {
     return (
@@ -19,14 +19,8 @@ export default function Section({ className }: { className: string }) {
                         </form>
                     </div>
                     <div className='w-full flex flex-wrap items-center justify-center'>
-                        <Card className='w-[350px] h-[550px] border border-black mx-2 my-2 text-slate-900' imageSource='/afroked/images/addidas.jpg' />
-                        <Card className='w-[350px] h-[550px] border border-black mx-2 my-2 text-slate-900' imageSource='/afroked/images/addidas.jpg' />
-                        <Card className='w-[350px] h-[550px] border border-black mx-2 my-2 text-slate-900' imageSource='/afroked/images/addidas.jpg' />
-                        <Card className='w-[350px] h-[550px] border border-black mx-2 my-2 text-slate-900' imageSource='/afroked/images/addidas.jpg' />
-                        <Card className='w-[350px] h-[550px] border border-black mx-2 my-2 text-slate-900' imageSource='/afroked/images/addidas.jpg' />
-                        <Card className='w-[350px] h-[550px] border border-black mx-2 my-2 text-slate-900' imageSource='/afroked/images/addidas.jpg' />
-                        <Card className='w-[350px] h-[550px] border border-black mx-2 my-2 text-slate-900' imageSource='/afroked/images/addidas.jpg' />
-                        <Card className='w-[350px] h-[550px] border border-black mx-2 my-2 text-slate-900' imageSource='/afroked/images/addidas.jpg' />
+                        <Category className='flex overflow-x-auto mb-5' />
+                        <Category className='flex overflow-x-auto mb-5' />
                     </div>
                 </div>
             </div>
