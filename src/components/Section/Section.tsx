@@ -21,6 +21,7 @@ export default function Section({ className }: { className: string }) {
                     <div className='w-full flex flex-wrap items-center justify-center'>
                         <Category className='flex overflow-x-auto mb-5' />
                         <Category className='flex overflow-x-auto mb-5' />
+                        dqsdsqdqdqdqsqd test
                     </div>
                 </div>
             </div>
