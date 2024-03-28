@@ -1,15 +1,15 @@
+import { Outlet } from 'react-router-dom'
 import './App.css'
 import Footer from './components/Footer/Footer'
 import Navbar from './components/Navbar/Navbar'
-import Section from './components/Section/Section'
 
 function App() {
 
 
   return (
     <>
-      <Navbar className='px-2 h-14 w-full bg-gray-800 text-white flex items-center uppercase' />
-      <Section className='grow flex flex-col items-center justify-center w-full h-full py-2' />
+      <Navbar className='px-2 h-[56px] w-full bg-gray-800 text-white flex items-center uppercase' />
+      <Outlet />
       <FloatingButton className='fixed w-14 h-14 mr-2 mb-2 bottom-0 right-0 rounded-full bg-gray-600 text-white flex items-center justify-center' />
       <Footer className='px-2 h-14 bg-gray-800 text-white flex items-center font-medium' />
     </>

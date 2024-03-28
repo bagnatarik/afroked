@@ -1,11 +1,13 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
-interface Category {
+
+export interface Category {
     id: number,
     name: string
 }
-interface Product {
+export interface Product {
     id: number,
     name: string,
     price: number,
@@ -74,8 +76,12 @@ export function Categories({ className, listCardSetData }: { className: string, 
         try {
             let response = null
             if (key) {
+                console.log('hey');
+
                 response = await axios.get(`https://afroked.onrender.com/api/categories/${key}/products`)
             } else {
+                console.log('key');
+
                 response = await axios.get(`https://afroked.onrender.com/api/categories/all`)
             }
             listCardSetData(response.data)
@@ -87,9 +93,7 @@ export function Categories({ className, listCardSetData }: { className: string, 
     }
 
     const categoriesComponent = data.map((category: Category) => <Button onclick={changeListProduct} className='text-sm flex-shrink-0 items-center h-full hover:bg-gray-700 flex py-2 px-5 ml-2 bg-gray-800 text-white rounded-lg' isSearchButton={false} text={category.name} id={category.id} key={category.id} />)
-    categoriesComponent.push(
-        <Button onclick={changeListProduct} className='text-sm flex-shrink-0 items-center h-full hover:bg-gray-700 flex py-2 px-5 ml-2 bg-gray-800 text-white rounded-lg' isSearchButton={false} text={'Tout'} id={undefined} key={999999999} />
-    )
+
 
     return (
         <>
@@ -117,7 +121,7 @@ export function ListCard({ className, data, setData }: { className: string, data
         fetch()
     })
 
-    const listProducts = data.map((product: Product) => (<Card name={product.name} key={product.id} price={product.price} imageUrl={product.image} className='h-[400px] w-[300px] border-gray-300 rounded-lg shadow-lg border mx-2 flex-shrink-0 py-2' />))
+    const listProducts = data.map((product: Product) => (<Card product={product} name={product.name} key={product.id} price={product.price} imageUrl={product.image} className='h-[400px] w-[300px] border-gray-300 rounded-lg shadow-lg border mx-2 flex-shrink-0 py-2' />))
 
     return (
         <>
@@ -130,7 +134,8 @@ export function ListCard({ className, data, setData }: { className: string, data
     )
 }
 
-export function Card({ className, imageUrl, price, name }: { className: string, imageUrl: string, price: number, name: string }) {
+export function Card({ className, imageUrl, price, name, product }: { className: string, imageUrl: string, price: number, name: string, product: Product }) {
+
     return (
         <>
             <div className={className}>
@@ -140,7 +145,9 @@ export function Card({ className, imageUrl, price, name }: { className: string, 
                     <div className="flex">
                         <p className="w-1/2 text-2xl font-bold ml-2">{price} FCFA</p>
                         <div className="w-1/2">
-                            <Button id={undefined} onclick={() => { }} className="text-sm flex-shrink-0 items-center hover:bg-gray-700 flex py-3 px-10 mr-2 bg-gray-800 text-white rounded-lg" text="Voir plus" isSearchButton={false} />
+                            <Link to={`detail/${product.id}`}>
+                                <Button id={undefined} onclick={() => { }} className="text-sm flex-shrink-0 items-center hover:bg-gray-700 flex py-3 px-10 mr-2 bg-gray-800 text-white rounded-lg" text="Voir plus" isSearchButton={false} />
+                            </Link>
                         </div>
                     </div>
                 </div>
