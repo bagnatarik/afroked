@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
-import { json, useLoaderData } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import { Button, Product } from "../Section/Section";
 import { Carts } from "../../App";
 
