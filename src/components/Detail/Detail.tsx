@@ -6,7 +6,9 @@ import { Button, Product } from "../Section/Section";
 /* export async function loader({ params }) {
     return params.productId;
 } */
-
+// @"@ts-expect-error: Ignorer l'erreur de type implicite pour params
+// @ts-ignore: Ignorer l'erreur de déclaration inutilisée pour setData
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export async function loader({ params }) {
     const fetch = async () => {
         const response = await axios.get<Product>(`https://afroked.onrender.com/api/products/${params.productId}`)
@@ -18,6 +20,8 @@ export async function loader({ params }) {
 
 export default function Detail() {
 
+    // @ts-ignore: Ignorer l'erreur de déclaration inutilisée pour setData
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [data, setData] = useState<Product>(useLoaderData())
     const [count, setCount] = useState(0)
 
