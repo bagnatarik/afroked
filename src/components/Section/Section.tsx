@@ -8,12 +8,13 @@ export interface Category {
     name: string
 }
 export interface Product {
-    id: number,
+    id: string,
     name: string,
     price: number,
     stock: number,
     image: string,
-    description: string
+    description: string,
+    quantity: number
 }
 
 export default function Section({ className }: { className: string }) {

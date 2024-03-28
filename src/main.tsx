@@ -9,6 +9,7 @@ import App from './App.tsx'
 import './index.css'
 import Section from './components/Section/Section.tsx';
 import Detail, { loader } from './components/Detail/Detail.tsx';
+import CartList from './components/Cart/Cart.tsx';
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
         element: <Detail />,
         loader: loader
       },
+      {
+        path: '/afroked/cart',
+        element: <CartList />
+      }
     ]
   },
 

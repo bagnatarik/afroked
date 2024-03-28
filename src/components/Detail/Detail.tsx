@@ -1,7 +1,8 @@
 import axios from "axios";
 import { useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { json, useLoaderData } from "react-router-dom";
 import { Button, Product } from "../Section/Section";
+import { Carts } from "../../App";
 
 /* export async function loader({ params }) {
     return params.productId;
@@ -41,7 +42,7 @@ export default function Detail() {
             <div className="grow flex flex-col items-center w-full h-full">
                 <img className="w-full h-[450px] mb-3" src={data!.image} alt="" />
                 <div className="px-3">
-                    <p className="font-bold text-2xl mb-2 capitalize">{data!.name}</p>
+                    <p className="font-bold text-2xl mb-2 capitalize">{data!.name} <span className="lowercase">({data!.stock} restant)</span></p>
 
                     <div className="flex items-center">
                         <p className=" text-2xl mb-2 uppercase w-1/2">{data!.price} CFA</p>
@@ -57,7 +58,14 @@ export default function Detail() {
 
                         </div>
                     </div>
-                    <Button id={undefined} onclick={() => { }} className="text-sm w-full flex-shrink-0 items-center justify-center my-4 hover:bg-gray-700 flex py-5 px-10 mr-2 bg-gray-800 text-white rounded-lg" text="Ajouter" isSearchButton={false} />
+                    <Button id={undefined} onclick={() => {
+                        if (count > 0) {
+                            data.quantity = count;
+                            Carts.push(data)
+                            localStorage.setItem('Carts', JSON.stringify(Carts))
+                        }
+
+                    }} className="text-sm w-full flex-shrink-0 items-center justify-center my-4 hover:bg-gray-700 flex py-5 px-10 mr-2 bg-gray-800 text-white rounded-lg" text="Ajouter" isSearchButton={false} />
                     <p className="font-normal text-sm mb-2">{data!.description}</p>
                 </div>
             </div>
