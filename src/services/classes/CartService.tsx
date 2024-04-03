@@ -4,10 +4,8 @@ import ICartService from "../ICartService";
 
 export default class CartService implements ICartService {
 
-    /* token = localStorage.getItem('token')
-    userId = localStorage.getItem('user_id') */
-    token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo1NjU0MDY5MDk3LCJleHBpcmVzIjoxNzEyMjI4MDcxLjcyNTMyODJ9.feuUInYN-ubdXAHaay4pVxVKhkcb_YqA4-v_a0Qe7_k'
-    userId = 5654069097
+    token = localStorage.getItem('token')
+    userId = localStorage.getItem('user_id')
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     async create(createOrUpdateCart: CreateOrUpdateCart[]): Promise<any> {
         try {
