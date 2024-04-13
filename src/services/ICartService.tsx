@@ -6,4 +6,6 @@ export default interface ICartService {
     getCart(): Promise<ICart | undefined>
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     deleteCart(productId: string): Promise<any>
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    validate(cartId: string): Promise<any>
 }

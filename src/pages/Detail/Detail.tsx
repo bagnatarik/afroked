@@ -83,7 +83,7 @@ export default function Detail({ className }: { className: string }) {
                                 <img className='w-full h-80 mb-10 rounded-b-lg' src={product.image} alt="" />
                                 <Button link='/afroked/' onclick={goTo} className='absolute top-0 right-0 border px-2 py-2 bg-white/50 rounded-lg mt-2 mr-2 text-black' icon={crossIcon} text={undefined} />
                             </div>
-                            <p className='font-bold text-lg mb-3'>{product.name}</p>
+                            <p className='font-bold text-lg mb-3'>{product.name} ({product.stock})</p>
                             {
                                 seeMore ? (
                                     <p className='text-sm text-gray-400'>{product.description}</p>

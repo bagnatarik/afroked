@@ -6,6 +6,10 @@ export default class CartService implements ICartService {
 
     token = localStorage.getItem('token')
     userId = localStorage.getItem('user_id')
+
+    /* token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo1NjU0MDY5MDk3LCJleHBpcmVzIjoxNzEzMTIzOTkxLjMyOTg0ODN9.pezmu0O7z8xyL8zAzHcRcuz2oxONu_duGLRWL4ee-sE'
+    userId = '5654069097' */
+
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     async create(createOrUpdateCart: CreateOrUpdateCart[]): Promise<any> {
         try {
@@ -18,8 +22,9 @@ export default class CartService implements ICartService {
             }
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
         } catch (err: any) {
-            return err.response
-
+            return await new Promise((resolve) => {
+                resolve(err.response);
+            });
         }
     }
     async getCart(): Promise<ICart | undefined> {
@@ -49,6 +54,19 @@ export default class CartService implements ICartService {
             return err.response
 
         }
+    }
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    async validate(cartId: string): Promise<any> {
+        if (this.token && this.userId) {
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            const response = await axios.put<any>(`${import.meta.env.VITE_API_URL}cart/validate/${cartId}`, null, {
+                headers: {
+                    Authorization: `Bearer ${this.token}`
+                }
+            })
+            return response.data
+        }
+        return undefined
     }
 
 }
