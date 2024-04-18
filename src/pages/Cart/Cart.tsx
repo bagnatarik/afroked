@@ -8,6 +8,7 @@ import CartService from '../../services/classes/CartService'
 import { useEffect, useRef, useState } from 'react'
 import ICart from '../../interfaces/ICart'
 import Card from '../../components/Card'
+import { toast } from 'sonner'
 
 export default function Cart({ className }: { className: string }) {
     const cartService: ICartService = new CartService()
@@ -35,7 +36,13 @@ export default function Cart({ className }: { className: string }) {
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
         } catch (error: any) {
             if (error.response.status == 404) {
-                alert("Veuillez ajouter un produit")
+                toast.error("Panier vide", {
+                    description: "Veuillez ajouter un produit"
+                })
+                navigate('/afroked/')
+            }
+            else if (error.response.status == 403) {
+                toast.warning("Veuillez vous connecter via telegram")
                 navigate('/afroked/')
             }
         }
@@ -43,9 +50,9 @@ export default function Cart({ className }: { className: string }) {
 
     const validate = async () => {
         const response = await cartService.validate(cart!.cart_id)
-        console.log(response)
+        toast.success(response.detail)
         goTo('/afroked/')
-        alert(response.detail)
+
     }
 
     useEffect(() => {

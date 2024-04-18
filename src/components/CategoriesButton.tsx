@@ -5,7 +5,7 @@ import Category from "../interfaces/ICategory";
 import { Listbox, Transition } from '@headlessui/react'
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
 
-export default function CategoriesButton({ setCategory }: { setCategory: CallableFunction }) {
+export default function CategoriesButton({ setCategory, setState, setProducts }: { setCategory: CallableFunction, setState: CallableFunction, setProducts: CallableFunction }) {
     const categoryService: ICategoryService = new CategoryService();
     const [categories, setCategories] = useState<Category[] | null>(null)
 
@@ -75,7 +75,8 @@ export default function CategoriesButton({ setCategory }: { setCategory: Callabl
                                                         value={category}
                                                         onClick={() => {
                                                             setCategory(category)
-
+                                                            setProducts(undefined)
+                                                            setState(undefined)
                                                         }}
                                                     >
                                                         {({ selected, active }) => (

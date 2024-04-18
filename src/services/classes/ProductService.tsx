@@ -5,6 +5,7 @@ import IProductService from "../IProductService";
 
 export default class ProductService implements IProductService {
 
+
     product = 'products/'
 
     async getByCategory(idCategory: string): Promise<Product[]> {
@@ -22,6 +23,11 @@ export default class ProductService implements IProductService {
     }
     async update(): Promise<Product> {
         const response = await axios.get<Product>(`${import.meta.env.VITE_API_URL}${this.product}`);
+        return response.data
+    }
+
+    async search(term: string): Promise<Product[]> {
+        const response = await axios.post<Product[]>(`${import.meta.env.VITE_API_URL}${this.product}search?search_term=${term}`);
         return response.data
     }
 

@@ -12,6 +12,7 @@ import ProductService from '../../services/classes/ProductService'
 import ICartService from '../../services/ICartService'
 import CartService from '../../services/classes/CartService'
 import { CreateOrUpdateCart } from '../../interfaces/ICart'
+import { toast } from 'sonner'
 
 export default function Detail({ className }: { className: string }) {
     const [product, setProduct] = useState<undefined | Product>()
@@ -41,7 +42,6 @@ export default function Detail({ className }: { className: string }) {
     }
 
     const addToCart = async () => {
-        console.log(count);
 
         const createOrUpdateCart: CreateOrUpdateCart[] = [
             {
@@ -57,15 +57,16 @@ export default function Detail({ className }: { className: string }) {
         setLoading((loading) => !loading)
 
         if (response.status == 200) {
-            alert('Produit ajouter avec succès')
+            toast.success('Produit ajouter avec succès')
         } else if (response.status == 400) {
-            alert(response.data.detail)
-
+            toast.error(response.data.detail)
+        }
+        else if (response.status == 403) {
+            toast.warning(response.data.detail)
+            navigate('/afroked/')
         }
 
 
-
-        navigate('/afroked/')
     }
 
     useEffect(() => {
